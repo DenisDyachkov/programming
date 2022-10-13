@@ -8,7 +8,7 @@ using namespace std;
 * \ param z Третий парметр функции
 * \ return Значение функции
 */
-double get_A(double x, double y, double z);
+double get_A(const double x,const double y,const double z);
 /**
  * \ brief Функция расчета по заданной формуле
  * \ param x Первый параметр функции
@@ -16,7 +16,7 @@ double get_A(double x, double y, double z);
  * \ param z Третий парметр функции
  * \ return Значение функции
  */
-double get_B(double x, double y, double z);
+double get_B(const double x,const double y,const double z);
 /**
 * \ brief Точка входа в программу
 * \ return Возвращает 0 в случае успеха
