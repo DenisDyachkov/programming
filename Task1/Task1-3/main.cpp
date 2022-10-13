@@ -18,7 +18,7 @@ double get_work(const double work);
  */
 double get_distance(double power, double work);
 /**
- * \ brief Рассчитывает Пройденный путь
+ * \ brief Рассчитывает Пройденный  путь
  * \ return возвращает 0 в случае успеха
  */
 int main()
