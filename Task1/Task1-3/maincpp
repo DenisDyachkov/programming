@@ -2,20 +2,7 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
-double get_power(const double power);
-/**
- * \ brief Рассчитывает силу тяги
- * \ param power сила тяги
- * \ param work  значение совершенной работы
- * \ return сила тяги
- */
-double get_work(const double work);
-/**
- * \ brief Рассчитывает работу
- * \ param power сила тяги
- * \ param work  значение совершенной работы
- * \ return значение работы
- */
+
 double get_distance(double power, double work);
 /**
  * \ brief Рассчитывает Пройденный путь
