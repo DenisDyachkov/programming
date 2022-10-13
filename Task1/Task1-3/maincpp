@@ -3,7 +3,7 @@
 #include <cmath>
 using namespace std;
 
-double get_distance(double power, double work);
+double get_distance( const double power, const double work);
 /**
  * \ brief Рассчитывает  Пройденный путь
  * \ return возвращает 0 в случае успеха
