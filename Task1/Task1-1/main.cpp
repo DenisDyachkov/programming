@@ -1,7 +1,6 @@
 ﻿#include <iostream>
 #include <cmath>
 using namespace std;
-#define _USE_MATH_DEFINES
 /**
 * \ brief Функция расчета по заданной формуле
 * \ param x Первый параметр функции
