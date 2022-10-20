@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include <cmath>
 using namespace std;
 /**
  * \ brief Функция расчета для аргумента меньше, чем пороговое значение
@@ -28,9 +29,9 @@ int main()
     cin >> x;
 
     const double THRESHOLD = 1;
-    const double a = 3.5;
+    const double a = 20.3;
 
-    if (x < THRESHOLD)
+    if (x <= THRESHOLD)
     {
         const double y = getFunction1(x);
         cout << " y = " << y;
@@ -44,12 +45,12 @@ int main()
     return 0;
 }
 
-double getFunction1(x)
+double getFunction2(const double x, const double a)
 {
-    return log10(x + 1)
+    return  sin(2) * sqrt(a * x);
 }
 
-double getFunction2(x, a)
+double getFunction1(const double x)
 {
-    return sin(2) * sqrt(| a * x | )
+    return log10(x + 1);
 }
