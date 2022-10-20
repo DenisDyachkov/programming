@@ -1,11 +1,11 @@
-#include <iostream>
+п»ї#include <iostream>
 
 using namespace std;
 
 /**
-* \brief Считывает переменную из консоли.
-* \param message Побуждающее сообщение для пользователя.
-* \return Значение переменной.
+* \brief РЎС‡РёС‚С‹РІР°РµС‚ РїРµСЂРµРјРµРЅРЅСѓСЋ РёР· РєРѕРЅСЃРѕР»Рё.
+* \param message РџРѕР±СѓР¶РґР°СЋС‰РµРµ СЃРѕРѕР±С‰РµРЅРёРµ РґР»СЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ.
+* \return Р—РЅР°С‡РµРЅРёРµ РїРµСЂРµРјРµРЅРЅРѕР№.
 */
 
 double getNumber(const string& message);
@@ -17,49 +17,49 @@ enum class userInput
 };
 
 /**
-* \brief Считывает порядковый номер дня недели.
-* \param number Порядковый номер дня недели.
-* \return Название дня недели.
+* \brief РЎС‡РёС‚С‹РІР°РµС‚ РїРѕСЂСЏРґРєРѕРІС‹Р№ РЅРѕРјРµСЂ РґРЅСЏ РЅРµРґРµР»Рё.
+* \param number РџРѕСЂСЏРґРєРѕРІС‹Р№ РЅРѕРјРµСЂ РґРЅСЏ РЅРµРґРµР»Рё.
+* \return РќР°Р·РІР°РЅРёРµ РґРЅСЏ РЅРµРґРµР»Рё.
 */
 
 string getDay(const int number);
 
 /**
-* \brief Считывает порядковый номер месяца.
-* \param number Порядковый номер месяца.
-* \return Название месяца.
+* \brief РЎС‡РёС‚С‹РІР°РµС‚ РїРѕСЂСЏРґРєРѕРІС‹Р№ РЅРѕРјРµСЂ РјРµСЃСЏС†Р°.
+* \param number РџРѕСЂСЏРґРєРѕРІС‹Р№ РЅРѕРјРµСЂ РјРµСЃСЏС†Р°.
+* \return РќР°Р·РІР°РЅРёРµ РјРµСЃСЏС†Р°.
 */
 
 string getMonth(const int number);
 
 /*
-*\brief Точка входа в программу
-*\return возвращает 0 в случае успеха
+*\brief РўРѕС‡РєР° РІС…РѕРґР° РІ РїСЂРѕРіСЂР°РјРјСѓ
+*\return РІРѕР·РІСЂР°С‰Р°РµС‚ 0 РІ СЃР»СѓС‡Р°Рµ СѓСЃРїРµС…Р°
 */
 
 int main()
 {
-	cout « "Введите число, соответствующее заданию:\n"
-		« static_cast<int>(userInput::DAY_OF_THE_WEEK) « " - Определение названия дня недели по номеру\n"
-		« static_cast<int>(userInput::MONTH) « " - Определение названия месяца по номеру\n";
+	cout В« "Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ, СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РµРµ Р·Р°РґР°РЅРёСЋ:\n"
+		В« static_cast<int>(userInput::DAY_OF_THE_WEEK) В« " - РћРїСЂРµРґРµР»РµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ РґРЅСЏ РЅРµРґРµР»Рё РїРѕ РЅРѕРјРµСЂСѓ\n"
+		В« static_cast<int>(userInput::MONTH) В« " - РћРїСЂРµРґРµР»РµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ РјРµСЃСЏС†Р° РїРѕ РЅРѕРјРµСЂСѓ\n";
 
 	int input = 0;
-	cin »  input;
+	cin В»  input;
 	const auto choice = static_cast<userInput>(input);
 
 	switch (choice)
 	{
 	case userInput::DAY_OF_THE_WEEK:
 	{
-		const double number = getNumber("Введите номер дня: ");
-		cout « number « " день недели" « " - " « getDay(number) « "\n";
+		const double number = getNumber("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РґРЅСЏ: ");
+		cout В« number В« " РґРµРЅСЊ РЅРµРґРµР»Рё" В« " - " В« getDay(number) В« "\n";
 		break;
 	}
 
 	case userInput::MONTH:
 	{
-		const double number = getNumber("Введите номер месяца: ");
-		cout « number « " месяц" « " - " « getMonth(number) « "\n";
+		const double number = getNumber("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РјРµСЃСЏС†Р°: ");
+		cout В« number В« " РјРµСЃСЏС†" В« " - " В« getMonth(number) В« "\n";
 		break;
 	}
 	}
@@ -69,9 +69,9 @@ int main()
 
 double getNumber(const string& message)
 {
-	cout « message;
+	cout В« message;
 	int variable = 0;
-	cin » variable;
+	cin В» variable;
 	return variable;
 }
 
@@ -81,43 +81,43 @@ string getDay(const int number)
 	{
 	case 1:
 	{
-		return "понедельник";
+		return "РїРѕРЅРµРґРµР»СЊРЅРёРє";
 		break;
 	}
 
 	case 2:
 	{
-		return "вторник";
+		return "РІС‚РѕСЂРЅРёРє";
 		break;
 	}
 
 	case 3:
 	{
-		return "среда";
+		return "СЃСЂРµРґР°";
 		break;
 	}
 
 	case 4:
 	{
-		return "четверг";
+		return "С‡РµС‚РІРµСЂРі";
 		break;
 	}
 
 	case 5:
 	{
-		return "пятница";
+		return "РїСЏС‚РЅРёС†Р°";
 		break;
 	}
 
 	case 6:
 	{
-		return "суббота";
+		return "СЃСѓР±Р±РѕС‚Р°";
 		break;
 	}
 
 	case 7:
 	{
-		return "воскресенье";
+		return "РІРѕСЃРєСЂРµСЃРµРЅСЊРµ";
 		break;
 	}
 	}
@@ -129,73 +129,73 @@ string getMonth(const int number)
 	{
 	case 1:
 	{
-		return "январь";
+		return "СЏРЅРІР°СЂСЊ";
 		break;
 	}
 
 	case 2:
 	{
-		return "февраль";
+		return "С„РµРІСЂР°Р»СЊ";
 		break;
 	}
 
 	case 3:
 	{
-		return "март";
+		return "РјР°СЂС‚";
 		break;
 	}
 
 	case 4:
 	{
-		return "апрель";
+		return "Р°РїСЂРµР»СЊ";
 		break;
 	}
 
 	case 5:
 	{
-		return "май";
+		return "РјР°Р№";
 		break;
 	}
 
 	case 6:
 	{
-		return "июнь";
+		return "РёСЋРЅСЊ";
 		break;
 	}
 
 	case 7:
 	{
-		return "июль";
+		return "РёСЋР»СЊ";
 		break;
 	}
 
 	case 8:
 	{
-		return "август";
+		return "Р°РІРіСѓСЃС‚";
 		break;
 	}
 
 	case 9:
 	{
-		return "сентябрь";
+		return "СЃРµРЅС‚СЏР±СЂСЊ";
 		break;
 	}
 
 	case 10:
 	{
-		return "октябрь";
+		return "РѕРєС‚СЏР±СЂСЊ";
 		break;
 	}
 
 	case 11:
 	{
-		return "ноябрь";
+		return "РЅРѕСЏР±СЂСЊ";
 		break;
 	}
 
 	case 12:
 	{
-		return "декабрь";
+		return "РґРµРєР°Р±СЂСЊ";
 		break;
 	}
 
