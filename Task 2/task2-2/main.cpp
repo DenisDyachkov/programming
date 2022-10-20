@@ -50,7 +50,7 @@ double getFunction2(const double x, const double a)
     return  sin(2) * sqrt(a * x);
 }
 
-double getFunction1(const double x)
+double getFunction1(  const double x)
 {
-    return log10(x + 1);
+    return  log10(x + 1);
 }
