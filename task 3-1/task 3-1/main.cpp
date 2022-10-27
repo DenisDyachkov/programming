@@ -50,7 +50,7 @@ int main()
 
 bool isExists(const double x)
 {
-    return abs(cos(x)) > numeric_limits<double>::min() && (x > sin(x));
+    return abs(cos(x)) > numeric_limits<double>::min() ;
 }
 
 double getY(const double x)
