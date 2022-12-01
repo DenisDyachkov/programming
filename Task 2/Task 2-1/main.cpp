@@ -1,203 +1,175 @@
-﻿#include <iostream>
+#include <iostream>
 
 using namespace std;
 
 /**
-* \brief Считывает переменную из консоли.
-* \param message Побуждающее сообщение для пользователя.
-* \return Значение переменной.
+* \brief Метод выводящий месяц
+* \param NameMonth - номер месяца
 */
+void GetMonth(int NameMonth);
 
-double getNumber(const string& message);
+/**
+* \brief Метод выводящий день недели
+* \param DayWeek - номер дня недели
+*/
+void GetWeek(int DayWeek);
 
-enum class userInput
+/**
+* \brief меню выбора
+*/
+enum class path
 {
-	DAY_OF_THE_WEEK,
-	MONTH
+	first = 1,
+	second = 2
 };
 
 /**
-* \brief Считывает порядковый номер дня недели.
-* \param number Порядковый номер дня недели.
-* \return Название дня недели.
+* \brief список месяцев
 */
-
-string getDay(const int number);
+enum class month
+{
+	January = 1,
+	February = 2,
+	March = 3,
+	April = 4,
+	May = 5,
+	June = 6,
+	July = 7,
+	August = 8,
+	September = 9,
+	October = 10,
+	November = 11,
+	December = 12
+};
 
 /**
-* \brief Считывает порядковый номер месяца.
-* \param number Порядковый номер месяца.
-* \return Название месяца.
+* \brief список дней недели
 */
-
-string getMonth(const int number);
-
-/*
-*\brief Точка входа в программу
-*\return возвращает 0 в случае успеха
-*/
-
-int main()
+enum class week
 {
-	cout « "Введите число, соответствующее заданию:\n"
-		« static_cast<int>(userInput::DAY_OF_THE_WEEK) « " - Определение названия дня недели по номеру\n"
-		« static_cast<int>(userInput::MONTH) « " - Определение названия месяца по номеру\n";
+	Monday = 1,
+	Tuesday = 2,
+	Wednesday = 3,
+	Thursday = 4,
+	Friday = 5,
+	Saturday = 6,
+	Sunday = 7
+};
 
-	int input = 0;
-	cin »  input;
-	const auto choice = static_cast<userInput>(input);
+int main() {
+	setlocale(LC_ALL, "Russian");
 
-	switch (choice)
+	int value, choice;
+	cout << "Выберите что вы хотите посчитать:\n1 - название Месяца\n2 - День недели\nВыбор: ";
+	cin >> choice;
+	const auto choosing = static_cast<path>(choice);
+	switch (choosing) {
+	case path::first:
 	{
-	case userInput::DAY_OF_THE_WEEK:
-	{
-		const double number = getNumber("Введите номер дня: ");
-		cout « number « " день недели" « " - " « getDay(number) « "\n";
+		cout<<"Введите номер месяца ";
+		cin >> value;
+		cout<<"Это ";
+		GetMonth(value);
 		break;
 	}
-
-	case userInput::MONTH:
+	case path::second:
 	{
-		const double number = getNumber("Введите номер месяца: ");
-		cout « number « " месяц" « " - " « getMonth(number) « "\n";
+		cout<<"Введите номер дня ";
+		cin >> value;
+		cout<<"Это ";
+		GetWeek(value);
 		break;
 	}
-	}
-
-	return 0;
+	} return 0;
 }
 
-double getNumber(const string& message)
-{
-	cout « message;
-	int variable = 0;
-	cin » variable;
-	return variable;
+void GetMonth(int NameMonth) {
+	const auto choosing = static_cast<month>(NameMonth);
+	switch (choosing){
+		case month::January:{
+			cout<<"January";
+			break;
+		}
+		case month::February:{
+			cout<<"February";
+			break;
+		}
+		case month::March:{
+			cout<<"March";
+			break;
+		}
+		case month::April:{
+			cout<<"April";
+			break;
+		}
+		case month::May:{
+			cout<<"May";
+			break;
+		}
+		case month::June:{
+			cout<<"June";
+			break;
+		}
+		case month::July:{
+			cout<<"July";
+			break;
+		}
+		case month::August:{
+			cout<<"August";
+			break;
+		}
+		case month::September:{
+			cout<<"September";
+			break;
+		}
+		case month::October:{
+			cout<<"October";
+			break;
+		}
+		case month::November:{
+			cout<<"November";
+			break;
+		}
+		case month::December:{
+			cout<<"December";
+			break;
+		}
+	}
+
 }
 
-string getDay(const int number)
-{
-	switch (number)
-	{
-	case 1:
-	{
-		return "понедельник";
-		break;
+void GetWeek(int DayWeek) {
+	const auto choosing = static_cast<week>(DayWeek);
+	
+	switch (choosing){
+		case week::Monday:{
+			cout<<"Monday";
+			break;
+		}
+		case week::Tuesday:{
+			cout<<"Tuesday";
+			break;
+		}
+		case week::Wednesday:{
+			cout<<"Wednesday";
+			break;
+		}
+				cout<<"Sunday";
+			break;
+		}
+		
 	}
-
-	case 2:
-	{
-		return "вторник";
-		break;
-	}
-
-	case 3:
-	{
-		return "среда";
-		break;
-	}
-
-	case 4:
-	{
-		return "четверг";
-		break;
-	}
-
-	case 5:
-	{
-		return "пятница";
-		break;
-	}
-
-	case 6:
-	{
-		return "суббота";
-		break;
-	}
-
-	case 7:
-	{
-		return "воскресенье";
-		break;
-	}
-	}
-}
-
-string getMonth(const int number)
-{
-	switch (number)
-	{
-	case 1:
-	{
-		return "январь";
-		break;
-	}
-
-	case 2:
-	{
-		return "февраль";
-		break;
-	}
-
-	case 3:
-	{
-		return "март";
-		break;
-	}
-
-	case 4:
-	{
-		return "апрель";
-		break;
-	}
-
-	case 5:
-	{
-		return "май";
-		break;
-	}
-
-	case 6:
-	{
-		return "июнь";
-		break;
-	}
-
-	case 7:
-	{
-		return "июль";
-		break;
-	}
-
-	case 8:
-	{
-		return "август";
-		break;
-	}
-
-	case 9:
-	{
-		return "сентябрь";
-		break;
-	}
-
-	case 10:
-	{
-		return "октябрь";
-		break;
-	}
-
-	case 11:
-	{
-		return "ноябрь";
-		break;
-	}
-
-	case 12:
-	{
-		return "декабрь";
-		break;
-	}
-
-	}
-}
+	
+}	case week::Thursday:{
+			cout<<"Thursday";
+			break;
+		}
+		case week::Friday:{
+			cout<<"Friday";
+			break;
+		}
+		case week::Saturday:{
+			cout<<"Saturday";
+			break;
+		}
+		case week::Sunday:{
