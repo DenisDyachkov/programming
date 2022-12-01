@@ -173,3 +173,10 @@ void GetWeek(int DayWeek) {
 			break;
 		}
 		case week::Sunday:{
+			cout<<"Sunday";
+			break;
+		}
+		
+	}
+	
+}
