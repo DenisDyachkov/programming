@@ -19,8 +19,8 @@ void GetWeek(int DayWeek);
 */
 enum class path
 {
-	first = 1,
-	second = 2
+	a = 1,
+	b = 2
 };
 
 /**
@@ -64,7 +64,7 @@ int main() {
 	cin >> choice;
 	const auto choosing = static_cast<path>(choice);
 	switch (choosing) {
-	case path::first:
+	case path::a:
 	{
 		cout<<"Введите номер месяца ";
 		cin >> value;
@@ -72,7 +72,7 @@ int main() {
 		GetMonth(value);
 		break;
 	}
-	case path::second:
+	case path::b:
 	{
 		cout<<"Введите номер дня ";
 		cin >> value;
@@ -80,6 +80,10 @@ int main() {
 		GetWeek(value);
 		break;
 	}
+	case path::defoult:
+	{
+	        return -1;
+        }
 	} return 0;
 }
 
